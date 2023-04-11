@@ -27,6 +27,7 @@ const Calendar = () => {
         if(title) {
             calendarApi.addEvent({
                 id: `${selected.dateStr}-${title}`,
+                title,
                 start: selected.startStr,
                 end: selected.endStr,
                 allDay: selected.allDay
@@ -43,7 +44,7 @@ const Calendar = () => {
     };
     // We use flex when we want to split
     return <Box m="20px">
-        <header title = "CALENDAR" subtitle="Full Calendar Interactive Page" /> 
+        <Header title = "CALENDAR" subtitle="Full Calendar Interactive Page" /> 
         <Box display="flex" justifyContent="space-between">
             {/* CALENDAR SIDEBAR */}
             
@@ -70,7 +71,6 @@ const Calendar = () => {
                         </ListItem>
                     )}
                 </List>
-
             </Box>
 
             {/* Calendar */}
@@ -79,9 +79,9 @@ const Calendar = () => {
                     height="75vh"
                     plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
                     headerToolbar={{
-                        left: "prev, next today",
+                        left: "prev,next today",
                         center: "title",
-                        right: "dayGridMonth, timeGridWeek, timeGridDay, listMonth"
+                        right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
                     }}
                     initialView="dayGridMonth"
                     editable={true}
