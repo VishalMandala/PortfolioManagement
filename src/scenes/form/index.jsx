@@ -16,7 +16,7 @@ const initialValues = {
 const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 
-const userSchema = yup.object().shape({
+const checkoutSchema = yup.object().shape({
     firstName: yup.string().required("required"),
     lastName: yup.string().required("required"),
     email: yup.string().email("invalid email").required("required"),
@@ -42,7 +42,7 @@ const Form = () => {
             <Formik
                 onSubmit={handleFormSubmit}
                 initialValues={initialValues}
-                validationSchema={userSchema}
+                validationSchema={checkoutSchema}
             >
                 {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
@@ -84,10 +84,10 @@ const Form = () => {
                                 label="Email"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.Email}
+                                value={values.email}
                                 name="email"
-                                error={!!touched.Email && !!errors.Email}
-                                helperText={touched.Email && errors.Email}
+                                error={!!touched.email && !!errors.email}
+                                helperText={touched.email && errors.email}
                                 sx={{ gridColumn: "span 4"}}
                             />
                             <TextField 
@@ -130,13 +130,18 @@ const Form = () => {
                                 sx={{ gridColumn: "span 4"}}
                             />
                         </Box>
+                        <Box display="flex" justifyContent="end" mt='20px'>
+                            <Button type="submit" color="secondary" variant="contained">
+                                Create New User
+                            </Button>
+                        </Box>
                     </form>
                 )}
             </Formik>
         </Box>
     )
 
-    return (<Box m="20px"></Box>)
+    //return (<Box m="20px"></Box>)
 }
 
 export default Form;
