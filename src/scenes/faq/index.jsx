@@ -16,66 +16,66 @@ const FAQ = () => {
         <Accordion defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography color={colors.greenAccent[400]} variant="h4">
-                    First Question
+                    What is Revenue Generated?
                 </Typography>
             </AccordionSummary>
             <AccordionDetails>
-                Here is the solution for the first question
+                Reveue Generated is the total amount of money Generatedby the organization.
             </AccordionDetails>
         </Accordion>
 
         <Accordion defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography color={colors.greenAccent[400]} variant="h4">
-                    Second Question
+                    What are Recent Transactions?
                 </Typography>
             </AccordionSummary>
             <AccordionDetails>
-                Here is the solution for the second question
+                Recent Transactions hold the list of transactions which took place recently
             </AccordionDetails>
         </Accordion>
 
         <Accordion defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography color={colors.greenAccent[400]} variant="h4">
-                    Third Question
+                    What is applications received?
                 </Typography>
             </AccordionSummary>
             <AccordionDetails>
-                Here is the solution for the third question
+                Applications received are the total number of applicants who applied to join the organization
             </AccordionDetails>
         </Accordion>
 
         <Accordion defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography color={colors.greenAccent[400]} variant="h4">
-                    Forth Question
+                    What is Geography Chart
                 </Typography>
             </AccordionSummary>
             <AccordionDetails>
-                Here is the solution for the forth question
+                Geography chart tells us about the expansion of the organization
             </AccordionDetails>
         </Accordion>
 
         <Accordion defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography color={colors.greenAccent[400]} variant="h4">
-                    Fifth Question
+                    What is Calender
                 </Typography>
             </AccordionSummary>
             <AccordionDetails>
-                Here is the solution for the fifth question
+                Calender is used for creation, and deletion of the events.
             </AccordionDetails>
         </Accordion>
 
         <Accordion defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography color={colors.greenAccent[400]} variant="h4">
-                    Sixth Question
+                    What is Invoice Balance
                 </Typography>
             </AccordionSummary>
             <AccordionDetails>
-                Here is the solution for the sixth question
+                Invoice balances are the transactions which took place.
             </AccordionDetails>
         </Accordion>
     </Box>
